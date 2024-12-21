@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0A67242D11A07600930022 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 1B0A67232D11A07600930022 /* ORSSerial */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BFBC9D02D11879C0003A31E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BFBC9B42D11879B0003A31E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BFBC9BB2D11879B0003A31E;
+			remoteInfo = ZxMachineState;
+		};
+		1BFBC9DA2D11879C0003A31E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BFBC9B42D11879B0003A31E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BFBC9BB2D11879B0003A31E;
+			remoteInfo = ZxMachineState;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BFBC9BC2D11879B0003A31E /* ZxMachineState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZxMachineState.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFBC9CF2D11879C0003A31E /* ZxMachineStateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZxMachineStateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFBC9D92D11879C0003A31E /* ZxMachineStateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZxMachineStateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1BFBC9BE2D11879B0003A31E /* ZxMachineState */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZxMachineState;
+			sourceTree = "<group>";
+		};
+		1BFBC9D22D11879C0003A31E /* ZxMachineStateTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZxMachineStateTests;
+			sourceTree = "<group>";
+		};
+		1BFBC9DC2D11879C0003A31E /* ZxMachineStateUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZxMachineStateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BFBC9B92D11879B0003A31E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0A67242D11A07600930022 /* ORSSerial in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9CC2D11879C0003A31E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9D62D11879C0003A31E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BFBC9B32D11879B0003A31E = {
+			isa = PBXGroup;
+			children = (
+				1BFBC9BE2D11879B0003A31E /* ZxMachineState */,
+				1BFBC9D22D11879C0003A31E /* ZxMachineStateTests */,
+				1BFBC9DC2D11879C0003A31E /* ZxMachineStateUITests */,
+				1BFBC9BD2D11879B0003A31E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BFBC9BD2D11879B0003A31E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BFBC9BC2D11879B0003A31E /* ZxMachineState.app */,
+				1BFBC9CF2D11879C0003A31E /* ZxMachineStateTests.xctest */,
+				1BFBC9D92D11879C0003A31E /* ZxMachineStateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BFBC9BB2D11879B0003A31E /* ZxMachineState */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFBC9E32D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineState" */;
+			buildPhases = (
+				1BFBC9B82D11879B0003A31E /* Sources */,
+				1BFBC9B92D11879B0003A31E /* Frameworks */,
+				1BFBC9BA2D11879B0003A31E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1BFBC9BE2D11879B0003A31E /* ZxMachineState */,
+			);
+			name = ZxMachineState;
+			packageProductDependencies = (
+				1B0A67232D11A07600930022 /* ORSSerial */,
+			);
+			productName = ZxMachineState;
+			productReference = 1BFBC9BC2D11879B0003A31E /* ZxMachineState.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BFBC9CE2D11879C0003A31E /* ZxMachineStateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFBC9E62D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineStateTests" */;
+			buildPhases = (
+				1BFBC9CB2D11879C0003A31E /* Sources */,
+				1BFBC9CC2D11879C0003A31E /* Frameworks */,
+				1BFBC9CD2D11879C0003A31E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBC9D12D11879C0003A31E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1BFBC9D22D11879C0003A31E /* ZxMachineStateTests */,
+			);
+			name = ZxMachineStateTests;
+			packageProductDependencies = (
+			);
+			productName = ZxMachineStateTests;
+			productReference = 1BFBC9CF2D11879C0003A31E /* ZxMachineStateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BFBC9D82D11879C0003A31E /* ZxMachineStateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BFBC9E92D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineStateUITests" */;
+			buildPhases = (
+				1BFBC9D52D11879C0003A31E /* Sources */,
+				1BFBC9D62D11879C0003A31E /* Frameworks */,
+				1BFBC9D72D11879C0003A31E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BFBC9DB2D11879C0003A31E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1BFBC9DC2D11879C0003A31E /* ZxMachineStateUITests */,
+			);
+			name = ZxMachineStateUITests;
+			packageProductDependencies = (
+			);
+			productName = ZxMachineStateUITests;
+			productReference = 1BFBC9D92D11879C0003A31E /* ZxMachineStateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BFBC9B42D11879B0003A31E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					1BFBC9BB2D11879B0003A31E = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					1BFBC9CE2D11879C0003A31E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 1BFBC9BB2D11879B0003A31E;
+					};
+					1BFBC9D82D11879C0003A31E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 1BFBC9BB2D11879B0003A31E;
+					};
+				};
+			};
+			buildConfigurationList = 1BFBC9B72D11879B0003A31E /* Build configuration list for PBXProject "ZxMachineState" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BFBC9B32D11879B0003A31E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1B0A67212D11A05000930022 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1BFBC9BD2D11879B0003A31E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BFBC9BB2D11879B0003A31E /* ZxMachineState */,
+				1BFBC9CE2D11879C0003A31E /* ZxMachineStateTests */,
+				1BFBC9D82D11879C0003A31E /* ZxMachineStateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BFBC9BA2D11879B0003A31E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9CD2D11879C0003A31E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9D72D11879C0003A31E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BFBC9B82D11879B0003A31E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9CB2D11879C0003A31E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFBC9D52D11879C0003A31E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BFBC9D12D11879C0003A31E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BFBC9BB2D11879B0003A31E /* ZxMachineState */;
+			targetProxy = 1BFBC9D02D11879C0003A31E /* PBXContainerItemProxy */;
+		};
+		1BFBC9DB2D11879C0003A31E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BFBC9BB2D11879B0003A31E /* ZxMachineState */;
+			targetProxy = 1BFBC9DA2D11879C0003A31E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BFBC9E12D11879C0003A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1BFBC9E22D11879C0003A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1BFBC9E42D11879C0003A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZxMachineState/ZxMachineState.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZxMachineState/Preview Content\"";
+				DEVELOPMENT_TEAM = XP83826939;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineState;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1BFBC9E52D11879C0003A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ZxMachineState/ZxMachineState.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZxMachineState/Preview Content\"";
+				DEVELOPMENT_TEAM = XP83826939;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineState;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1BFBC9E72D11879C0003A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineStateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZxMachineState.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZxMachineState";
+			};
+			name = Debug;
+		};
+		1BFBC9E82D11879C0003A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineStateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZxMachineState.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZxMachineState";
+			};
+			name = Release;
+		};
+		1BFBC9EA2D11879C0003A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineStateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ZxMachineState;
+			};
+			name = Debug;
+		};
+		1BFBC9EB2D11879C0003A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zx.ZxMachineStateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ZxMachineState;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BFBC9B72D11879B0003A31E /* Build configuration list for PBXProject "ZxMachineState" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBC9E12D11879C0003A31E /* Debug */,
+				1BFBC9E22D11879C0003A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BFBC9E32D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineState" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBC9E42D11879C0003A31E /* Debug */,
+				1BFBC9E52D11879C0003A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BFBC9E62D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineStateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBC9E72D11879C0003A31E /* Debug */,
+				1BFBC9E82D11879C0003A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BFBC9E92D11879C0003A31E /* Build configuration list for PBXNativeTarget "ZxMachineStateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFBC9EA2D11879C0003A31E /* Debug */,
+				1BFBC9EB2D11879C0003A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B0A67212D11A05000930022 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B0A67232D11A07600930022 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B0A67212D11A05000930022 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1BFBC9B42D11879B0003A31E /* Project object */;
+}
