@@ -7,7 +7,7 @@ struct ZxMachineStateApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmptyView()
         }
     }
 }

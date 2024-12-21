@@ -16,8 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.delegate = self
         // 设置图标
         if let button = statusBarItem?.button {
-            button.image = NSImage(systemSymbolName: "bolt.fill", accessibilityDescription: "Serial Communication")
+            button.image = NSImage(named: "logox")
             //button.imageScaling = .scaleAxesIndependently
+            button.image?.size = NSSize(width: 25, height: 25)
             button.action = #selector(togglePopover)
             button.target = self
         }

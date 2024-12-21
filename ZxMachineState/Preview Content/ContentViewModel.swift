@@ -5,14 +5,32 @@ import Foundation
 class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
     func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {}
     
-    @Published var receivedData: String = ""  // 接收到的数据
+    // @Published var receivedData: String = ""  // 接收到的数据
     @Published var sendData: String = ""      // 发送的文本框数据
+    @Published var btnState: String = "连接设备"      
+    @Published var availablePorts: [SerialPort] = []  // 串口设备列表，包含名称和路径
+    @Published var selectedPort: SerialPort? = nil    // 当前选中的串口设备
+    @Published var progress_cpu: CGFloat = 0.0  // 进度条的状态
+    @Published var progress_mem: CGFloat = 0.0  // 进度条的状态
+    @Published var progress_disk: CGFloat = 0.0  // 进度条的状态
+    
     private var serialPort: ORSSerialPort?
     private var timer: Timer?  // 定时器
 
+    // 用于表示串口设备的结构体
+    struct SerialPort: Hashable {
+        var name: String   // 串口设备的名称
+        var path: String   // 串口设备的路径
+    }
+    
     // 初始化串口
     func setupSerialPort() {
-        let port = ORSSerialPort(path: "/dev/tty.usbmodem58760460441")  // 替换为实际的串口路径
+        
+        if(selectedPort == nil){
+            return
+        }
+        
+        let port = ORSSerialPort(path: selectedPort?.path ?? "")  // 替换为实际的串口路径
         port?.baudRate = 115200
         port?.parity = .none
         port?.numberOfDataBits = 8
@@ -22,10 +40,24 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
         
         // 打开串口
         serialPort?.open()
+        if(serialPort?.isOpen == true)
+        {
+            btnState = "已连接"
+        }
+        else
+        {
+            btnState = "连接设备"
+        }
     }
 
     // 发送数据到串口
     func sendDataToSerialPort(data: String) {
+        
+        if(serialPort?.isOpen != true)
+        {
+            return
+        }
+        
         guard let port = serialPort else {
             print("Serial port is not available.")
             return
@@ -39,18 +71,18 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
 
     // 串口代理方法，接收数据
     func serialPort(_ serialPort: ORSSerialPort, didReceive data: Data) {
-        if let receivedString = String(data: data, encoding: .utf8) {
-            DispatchQueue.main.async {
-                self.receivedData += receivedString
-            }
-        }
+//        if let receivedString = String(data: data, encoding: .utf8) {
+//            DispatchQueue.main.async {
+//                self.receivedData += receivedString
+//            }
+//        }
     }
 
     // 执行Top命令获取Cpu信息
     func runTopCommand() -> String? {
         let task = Process()
         task.launchPath = "/usr/bin/top"
-        task.arguments = ["-l", "1" ,"-n" ,"0"]
+        task.arguments = ["-l", "2" ,"-n" ,"0"]
         
         let pipe = Pipe()
         task.standardOutput = pipe
@@ -67,22 +99,60 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
         
         return output
     }
+    
+    // 执行Top命令获取Cpu信息
+    func InitTtyList() {
+        // 获取所有可用串口设备
+        let ports = ORSSerialPortManager.shared().availablePorts
+        self.availablePorts = ports.map { port in
+            SerialPort(name: port.name, path: port.path)
+        }
+    }
 
-    // 解析Top命令返回的字符串 获取cpu使用情况
+//    // 解析Top命令返回的字符串 获取cpu使用情况
+//    func parseCPUUsage(from text: String) -> (user: Float, sys: Float, idle: Float)? {
+//        let cpuUsagePattern = "CPU usage: ([0-9.]+)% user, ([0-9.]+)% sys, ([0-9.]+)% idle"
+//        let regex = try? NSRegularExpression(pattern: cpuUsagePattern)
+//        if let match = regex?.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)) {
+//            if let userRange = Range(match.range(at: 1), in: text),
+//               let sysRange = Range(match.range(at: 2), in: text),
+//               let idleRange = Range(match.range(at: 3), in: text) {
+//                let user = Float(text[userRange]) ?? 0
+//                let sys = Float(text[sysRange]) ?? 0
+//                let idle = Float(text[idleRange]) ?? 0
+//                return (user, sys, idle)
+//            }
+//        }
+//        return nil
+//    }
+    
+    
     // 解析Top命令返回的字符串 获取cpu使用情况
     func parseCPUUsage(from text: String) -> (user: Float, sys: Float, idle: Float)? {
+        // 正则表达式匹配 CPU 使用率
         let cpuUsagePattern = "CPU usage: ([0-9.]+)% user, ([0-9.]+)% sys, ([0-9.]+)% idle"
+        
+        // 使用 NSRegularExpression 查找所有匹配的结果
         let regex = try? NSRegularExpression(pattern: cpuUsagePattern)
-        if let match = regex?.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)) {
-            if let userRange = Range(match.range(at: 1), in: text),
-               let sysRange = Range(match.range(at: 2), in: text),
-               let idleRange = Range(match.range(at: 3), in: text) {
+        
+        // 查找所有匹配的范围
+        let matches = regex?.matches(in: text, range: NSRange(text.startIndex..., in: text))
+        
+        // 如果有匹配项，获取最后一个
+        if let lastMatch = matches?.last {
+            if let userRange = Range(lastMatch.range(at: 1), in: text),
+               let sysRange = Range(lastMatch.range(at: 2), in: text),
+               let idleRange = Range(lastMatch.range(at: 3), in: text) {
+                
+                // 提取数字并转换为 Float
                 let user = Float(text[userRange]) ?? 0
                 let sys = Float(text[sysRange]) ?? 0
                 let idle = Float(text[idleRange]) ?? 0
+                
                 return (user, sys, idle)
             }
         }
+        
         return nil
     }
 
@@ -154,6 +224,7 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
               
             if let cpuUsage = parseCPUUsage(from: systemInfo) {
                 cpuUsage_v = Int(cpuUsage.user + cpuUsage.sys)
+                self.progress_cpu = CGFloat(cpuUsage_v)
             }
             
             if let memoryUsage = getMemoryUsage() {
@@ -162,6 +233,7 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
                 let memoryUsagePercentage = (usedMemoryGB / totalMemoryGB) * 100.0
 
                 memoryUsage_v = Int(memoryUsagePercentage)
+                self.progress_mem = CGFloat(memoryUsage_v)
             } else {
                 print("Failed to retrieve memory usage information")
             }
@@ -172,6 +244,8 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
                 let totalDiskGB = Double(diskUsage.total) / 1_073_741_824.0
                 let diskUsagePercentage = (usedDiskGB / totalDiskGB) * 100.0
                 diskUsage_v = Int(diskUsagePercentage)
+                
+                self.progress_disk = CGFloat(diskUsage_v)
                 print(String(format: "Disk Usage: %.2f%% (Used: %.2f GB, Total: %.2f GB)", diskUsagePercentage, usedDiskGB, totalDiskGB))
             } else {
                 print("Failed to retrieve disk usage information")
@@ -201,7 +275,7 @@ class ContentViewModel: NSObject, ObservableObject, ORSSerialPortDelegate {
     
     // 启动定时任务
     func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { [weak self] _ in
             self?.updateAndSendSystemInfo()
         }
     }
